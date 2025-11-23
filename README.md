@@ -1,2 +1,16 @@
-# radiology-report-triage-llm
-Zero-shot radiology report triage using LLM embeddings (Sentence Transformers). Classifies Normal vs Abnormal from raw clinical text, with UMAP visualization + Docker support. No training required.
+# Radiology Report Triage using LLM Embeddings
+
+Automatically classify radiology reports into **Normal vs Abnormal** using:
+- SentenceTransformer embeddings  
+- Zero-shot clustering  
+- UMAP visualization  
+- No model training required  
+
+This project mimics real-world clinical triage workflows.
+
+---
+
+## Quick Start (Docker)
+
+```bash
+docker-compose up --build
