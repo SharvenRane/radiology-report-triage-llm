@@ -6,4 +6,7 @@ services:
     container_name: radiology-triage
     volumes:
       - .:/app
-    command: bash -c "python src/embed.py && python src/classify.py && python src/visualize.py"
+    working_dir: /app
+    command: bash
+    stdin_open: true
+    tty: true

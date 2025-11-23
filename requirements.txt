@@ -1,6 +1,9 @@
 pandas
-sentence-transformers
 scikit-learn
 umap-learn
 matplotlib
 seaborn
+onnxruntime
+transformers
+tokenizers
+huggingface-hub

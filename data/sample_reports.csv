@@ -1,7 +1,51 @@
 report,label
-"lungs clear, no consolidation or infiltrates",normal
-"bilateral patchy opacities consistent with pneumonia",abnormal
-"no acute cardiopulmonary process",normal
-"right lower lobe consolidation concerning for infection",abnormal
-"no signs of pleural effusion",normal
-"left-sided pneumothorax detected",abnormal
+"Normal thoracic structures. Lungs clear. No evidence of pulmonary disease.",normal
+"Cardiac silhouette normal; no pleural effusion.",normal
+"No fracture or soft-tissue swelling identified.",normal
+"Lungs well aerated. No focal opacity.",normal
+"Normal abdomen. No GI obstruction detected.",normal
+"Liver, spleen, kidneys within normal size.",normal
+"No abnormal mass effect. No effusion.",normal
+"Normal musculoskeletal structures. No lytic lesions.",normal
+"Normal thoracic cavity. No bronchial thickening.",normal
+"No visible foreign body. GI tract normal.",normal
+"Mild bronchial pattern; cannot rule out early pneumonia.",abnormal
+"Focal pulmonary nodule in right caudal lung lobe.",abnormal
+"Moderate pleural effusion present.",abnormal
+"Possible abdominal mass near spleen; further imaging recommended.",abnormal
+"Patchy alveolar pattern consistent with pneumonia.",abnormal
+"Marked cardiomegaly noted.",abnormal
+"Diffuse interstitial pattern; consider pulmonary edema.",abnormal
+"Gas-distended stomach concerning for GDV.",abnormal
+"Foreign body suspected in small intestines.",abnormal
+"Lytic bone lesion in femur concerning for neoplasia.",abnormal
+"Caudal lung lobe consolidation consistent with aspiration.",abnormal
+"Thoracic mass causing tracheal deviation.",abnormal
+"Moderate peritoneal effusion.",abnormal
+"Obstruction pattern in mid-jejunum; surgical consult advised.",abnormal
+"Mineralized uroliths seen in urinary bladder.",abnormal
+"Pulmonary mass measuring 2.1 cm.",abnormal
+"Collapsed lung lobe (atelectasis) noted.",abnormal
+"Diffuse hepatomegaly observed.",abnormal
+"Spinal disc narrowing at L4–L5, possible IVDD.",abnormal
+"Thickened intestinal loops suggestive of enteritis.",abnormal
+"Normal pulmonary vasculature; no cardiogenic edema.",normal
+"No free gas in abdomen; no perforation.",normal
+"Normal skeletal alignment. No fractures.",normal
+"Unremarkable abdominal study.",normal
+"Heart size and shape within normal limits.",normal
+"No soft-tissue mass identified.",normal
+"Normal kidneys; no nephroliths.",normal
+"No compression of trachea observed.",normal
+"Normal ribs and vertebral bodies.",normal
+"Lungs clear. No consolidation.",normal
+"Diffuse bronchitis-like pattern; mild airway inflammation suspected.",abnormal
+"Enlarged spleen with heterogeneous echotexture.",abnormal
+"Mass effect displacing intestines cranially.",abnormal
+"Severe pulmonary consolidation right middle lobe.",abnormal
+"Large soft-tissue mass over thoracic wall.",abnormal
+"Multiple small nodules consistent with metastasis.",abnormal
+"Severe pericardial effusion present.",abnormal
+"Marked gastric distension from gas accumulation.",abnormal
+"Ureteral obstruction suspected; hydronephrosis present.",abnormal
+"Abnormal bowel gas pattern; possible volvulus.",abnormal

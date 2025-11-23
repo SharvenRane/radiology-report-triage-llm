@@ -1,30 +1,23 @@
 import numpy as np
-import umap
+import seaborn as sns
 import matplotlib.pyplot as plt
+import umap
 
-def plot_umap(
-    embeddings_path="results/embeddings.npy",
-    labels_path="results/labels.npy"
+def visualize_embeddings(
+    embeddings="results/embeddings.npy",
+    labels="results/labels.npy"
 ):
-    emb = np.load(embeddings_path)
-    labels = np.load(labels_path)
+    X = np.load(embeddings)
+    y = np.load(labels, allow_pickle=True)
 
-    reducer = umap.UMAP(random_state=42)
-    X = reducer.fit_transform(emb)
+    reducer = umap.UMAP()
+    X_2d = reducer.fit_transform(X)
 
-    plt.figure(figsize=(8,6))
-    scatter = plt.scatter(X[:,0], X[:,1], c=[0 if l=="normal" else 1 for l in labels], cmap="coolwarm")
-
-    plt.legend(
-        handles=scatter.legend_elements()[0],
-        labels=["Normal", "Abnormal"]
-    )
-
-    plt.title("UMAP Projection of Report Embeddings")
-    plt.savefig("results/umap_projection.png")
-    plt.close()
-
-    print(" UMAP visualization saved in results/umap_projection.png")
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(x=X_2d[:,0], y=X_2d[:,1], hue=y, palette="deep")
+    plt.title("UMAP Projection of Radiology Report Embeddings")
+    plt.savefig("results/umap_plot.png")
+    plt.show()
 
 if __name__ == "__main__":
-    plot_umap()
+    visualize_embeddings()

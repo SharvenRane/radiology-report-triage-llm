@@ -1,36 +1,26 @@
 import numpy as np
-from sklearn.cluster import KMeans
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-import matplotlib.pyplot as plt
-import seaborn as sns
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+import joblib
 
-def classify_embeddings(
-    embeddings_path="results/embeddings.npy",
-    labels_path="results/labels.npy"
+def train_classifier(
+    embeddings="results/embeddings.npy",
+    labels="results/labels.npy",
+    model_path="results/classifier.pkl"
 ):
-    emb = np.load(embeddings_path)
-    labels = np.load(labels_path)
+    X = np.load(embeddings)
+    y = np.load(labels, allow_pickle=True)
 
-    # Convert labels to numeric
-    label_to_id = {"normal": 0, "abnormal": 1}
-    true = np.array([label_to_id[l] for l in labels])
+    clf = LogisticRegression(max_iter=500)
+    clf.fit(X, y)
 
-    km = KMeans(n_clusters=2, random_state=42)
-    pred = km.fit_predict(emb)
+    preds = clf.predict(X)
+    print("=== Classification Report ===")
+    print(classification_report(y, preds))
 
-    # Try to match cluster IDs to true labels
-    if pred[0] != true[0]:
-        pred = 1 - pred
-
-    cm = confusion_matrix(true, pred)
-    disp = ConfusionMatrixDisplay(cm, display_labels=["Normal","Abnormal"])
-    disp.plot(cmap="Blues")
-
-    plt.title("Confusion Matrix (Zero-Shot Triage)")
-    plt.savefig("results/confusion_matrix.png")
-    plt.close()
-
-    print("🔥 Confusion matrix saved in results/confusion_matrix.png")
+    joblib.dump(clf, model_path)
+    print(f"✔ Classifier saved to {model_path}")
 
 if __name__ == "__main__":
-    classify_embeddings()
+    train_classifier()
