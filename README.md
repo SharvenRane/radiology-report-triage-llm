@@ -10,7 +10,14 @@ This project mimics real-world clinical triage workflows.
 
 ---
 
-## Quick Start (Docker)
+# Example Output (From Sample Data)
+Accuracy: 96%
+Normal Recall: 0.90
+Abnormal Recall: 1.00
 
-```bash
-docker-compose up --build
+# License
+MIT License
+
+#Quick Start (Local Python)
+pip install -r requirements.txt
+python src/run.py
